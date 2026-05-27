@@ -41,7 +41,7 @@ export default function FeatureAccordionSection() {
   ];
 
   return (
-    <section className="bg-surface text-primary relative overflow-hidden py-32">
+    <section className="bg-surface text-primary relative py-32">
       <div className="mx-auto w-full max-w-[1280px] px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           

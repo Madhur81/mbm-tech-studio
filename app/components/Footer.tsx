@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ButtonColorful } from "@/components/ui/button-colorful";
 
 export default function Footer() {
   return (
@@ -11,12 +12,11 @@ export default function Footer() {
               Let's build <br />
               <span className="text-accent">something great.</span>
             </h2>
-            <Link
-              href="/contact"
-              className="inline-flex bg-surface text-primary px-8 py-4 label-sm hover:bg-accent transition-all items-center gap-2 group font-bold"
-            >
-              Start Your Project
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            <Link href="/contact" className="inline-block">
+              <ButtonColorful 
+                label="Start Your Project" 
+                className="font-bold text-base h-12 px-6" 
+              />
             </Link>
           </div>
           <div className="md:col-span-6 grid grid-cols-2 gap-8 pt-4">

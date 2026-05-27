@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { DemoOne as HeroSequence } from "@/components/ui/demo";
-import { GlowCard } from "@/components/ui/spotlight-card";
 
 import FeatureAccordionSection from "@/components/ui/feature-accordion-section";
+import ProjectsShowcase from "@/components/ui/projects-showcase";
 import TestimonialSection from "@/components/ui/testimonials";
 
 const LookingForSection = () => {
@@ -53,12 +53,10 @@ const LookingForSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <GlowCard
-                glowColor="orange"
-                customSize
-                className="w-full h-full !aspect-auto cursor-default group"
+              <div
+                className="w-full h-full bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 p-6 flex flex-col cursor-default group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
               >
-                <div className="relative z-10 flex flex-col p-4 gap-4 h-full">
+                <div className="relative z-10 flex flex-col gap-4 h-full">
                   <div>
                     <span className="text-sm font-mono text-accent/80 font-bold bg-accent/10 px-3 py-1 rounded-full">
                       {card.number}
@@ -71,7 +69,7 @@ const LookingForSection = () => {
                     {card.desc}
                   </p>
                 </div>
-              </GlowCard>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -97,6 +95,7 @@ export default function Home() {
       <HeroSequence />
       <LookingForSection />
       <FeatureAccordionSection />
+      <ProjectsShowcase />
       <TestimonialSection />
     </main>
   );

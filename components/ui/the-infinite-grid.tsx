@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowRight, Compass, Sparkles, Activity } from "lucide-react";
+import { ButtonColorful } from "@/components/ui/button-colorful";
 
 // Premium typographic fade-up animation
 const fadeUp = (delay: number) => ({
@@ -132,12 +133,11 @@ export const Component = () => {
           {...fadeUp(0.6)} 
           className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-12 w-full sm:w-auto pointer-events-auto"
         >
-          <Link
-            href="/contact"
-            className="group w-full sm:w-auto text-center px-8 py-4 bg-accent text-black font-semibold text-sm tracking-wider uppercase rounded-sm hover:bg-amber-400 transition-all duration-300 shadow-xl shadow-accent/10 active:scale-[0.98] flex items-center justify-center gap-2.5"
-          >
-            Want Website
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          <Link href="/contact" className="w-full sm:w-auto">
+            <ButtonColorful 
+              label="Want Website" 
+              className="w-full sm:w-auto font-semibold uppercase tracking-wider" 
+            />
           </Link>
           
           <Link
